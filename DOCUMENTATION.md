@@ -4,6 +4,60 @@
 
 Welcome to the Person CRUD API documentation. This API allows you to perform CRUD (Create, Read, Update, Delete) operations on a "person" resource using both the person's ID and name as parameters.
 
+
+
+
+# UML CONSTRUCT
+
++-----------------------------------------+
+|              <<API Controller>>          |
+|-----------------------------------------|
+| + createPerson(request, response)       |
+| + getPersonById(request, response)      |
+| + getPersons(request, response)         |
+| + updatePersonById(request, response)   |
+| + deletePersonById(request, response)   |
++-----------------------------------------+
+                  |
+                  |
+                  |
+                  v
++-----------------------------------------+
+|            <<Service Layer>>           |
+|-----------------------------------------|
+| + createPerson(personData)              |
+| + getPersonById(id)                     |
+| + getAllPersons()                       |
+| + updatePersonById(id, newData)         |
+| + deletePersonById(id)                  |
++-----------------------------------------+
+                  |
+                  |
+                  |
+                  v
++-----------------------------------------+
+|           <<Data Access Layer>>         |
+|-----------------------------------------|
+| + savePerson(person)                    |
+| + findPersonById(id)                   |
+| + findPersons()                        |
+| + updatePersonById(id, newData)        |
+| + deletePersonById(id)                 |
++-----------------------------------------+
+                  |
+                  |
+                  |
+                  v
++-----------------------------------------+
+|            <<Database Model>>           |
+|-----------------------------------------|
+| - _id: ObjectId                         |
+| - name: String                          |
+|-----------------------------------------|
+| + getName()                            |
+| + setName(name)                        |
++-----------------------------------------+
+
 ## Table of Contents
 
 1. [Endpoint Details](#endpoint-details)
