@@ -31,7 +31,7 @@ const Person = require('./model/person');
 app.post('/api', checkNameIsString, async (req, res) => {
   try {
     const { name } = req.body;
-    const personByName = await Person.findOne({ name: param.toLowerCase() });
+    const personByName = await Person.findOne({ name: name.toLowerCase() });
     if (personByName) {
       return res.status(404).json({ error: 'Person Already Exist' });
     }
