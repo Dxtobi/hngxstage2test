@@ -66,7 +66,7 @@ Welcome to the Person CRUD API documentation. This API allows you to perform CRU
 4. [Setting Up and Deploying](#setting-up-and-deploying)
 
 ## Endpoint Details
-
+- for remote end point please replace  `http://localhost:5888/api` with `https://hngxtest2.onrender.com/api`
 ### Create a Person
 
 - **Endpoint:** `POST /api`
